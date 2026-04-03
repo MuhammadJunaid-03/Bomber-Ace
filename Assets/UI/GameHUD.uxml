@@ -1,0 +1,71 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="GameHUD.uss" />
+    <ui:VisualElement name="top-bar" class="top-bar">
+        <ui:VisualElement class="top-left">
+            <ui:Label text="HP" class="label-small" />
+            <ui:VisualElement class="health-bar-bg">
+                <ui:VisualElement name="health-fill" class="health-bar-fill" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="top-center">
+            <ui:Label name="score-text" text="SCORE: 0" class="score-label" />
+        </ui:VisualElement>
+        <ui:VisualElement class="top-right">
+            <ui:Label name="coin-text" text="500" class="coin-label" />
+            <ui:Label name="gem-text" text="10" class="gem-label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="left-panel" class="left-panel">
+        <ui:Label name="speed-text" text="180 km/h" class="flight-info" />
+        <ui:Label name="altitude-text" text="50 m" class="flight-info" />
+    </ui:VisualElement>
+    <ui:VisualElement name="bottom-bar" class="bottom-bar">
+        <ui:VisualElement class="weapon-info">
+            <ui:Label name="bomb-text" text="BOMBS: 20/20" class="weapon-label" />
+            <ui:Label name="ammo-text" text="AMMO: 200/200" class="weapon-label" />
+        </ui:VisualElement>
+        <ui:VisualElement class="target-info">
+            <ui:Label name="target-text" text="TARGETS: 0/0" class="target-label" />
+            <ui:VisualElement class="destruction-bar-bg">
+                <ui:VisualElement name="destruction-fill" class="destruction-bar-fill" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="crosshair" class="crosshair" />
+    <ui:VisualElement name="missile-warning" class="missile-warning hidden">
+        <ui:Label text="MISSILE INCOMING!" class="warning-text" />
+    </ui:VisualElement>
+    <ui:VisualElement name="damage-overlay" class="damage-overlay" />
+    <ui:VisualElement name="game-over-panel" class="overlay-panel hidden">
+        <ui:VisualElement class="panel-box">
+            <ui:Label text="MISSION FAILED" class="panel-title" />
+            <ui:Label name="go-score" text="Score: 0" class="panel-score" />
+            <ui:Button name="retry-btn" text="RETRY" class="panel-button" />
+            <ui:Button name="menu-btn" text="MAIN MENU" class="panel-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="mission-complete-panel" class="overlay-panel hidden">
+        <ui:VisualElement class="panel-box">
+            <ui:Label text="MISSION COMPLETE!" class="panel-title-success" />
+            <ui:Label name="mc-score" text="Score: 0" class="panel-score" />
+            <ui:Label name="mc-destruction" text="Destruction: 100%" class="panel-score" />
+            <ui:VisualElement class="stars-container">
+                <ui:Label name="star-1" text="*" class="star" />
+                <ui:Label name="star-2" text="*" class="star" />
+                <ui:Label name="star-3" text="*" class="star" />
+            </ui:VisualElement>
+            <ui:Label name="mc-coins" text="+500 Coins" class="reward-text" />
+            <ui:Label name="mc-gems" text="+2 Gems" class="reward-text" />
+            <ui:Button name="next-btn" text="NEXT MISSION" class="panel-button" />
+            <ui:Button name="mc-menu-btn" text="MAIN MENU" class="panel-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="pause-panel" class="overlay-panel hidden">
+        <ui:VisualElement class="panel-box">
+            <ui:Label text="PAUSED" class="panel-title" />
+            <ui:Button name="resume-btn" text="RESUME" class="panel-button" />
+            <ui:Button name="pause-retry-btn" text="RETRY" class="panel-button" />
+            <ui:Button name="pause-menu-btn" text="MAIN MENU" class="panel-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
